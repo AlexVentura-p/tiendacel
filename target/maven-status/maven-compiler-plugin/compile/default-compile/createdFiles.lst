@@ -1,0 +1,6 @@
+dominio\Producto.class
+servicio\ProductoServicioImpl.class
+servicio\ProductoServicio.class
+datos\ProductoDAOImpl.class
+datos\ProductoDAO.class
+web\ProductoServlet.class
