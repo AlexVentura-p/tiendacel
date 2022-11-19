@@ -1,6 +1,12 @@
 dominio\Producto.class
 servicio\ProductoServicioImpl.class
+servicio\ProveedoresServ.class
+datos\ProveedoresDAOImpl.class
+servicio\ProveedoresServImpl.class
+dominio\Proveedores.class
+web\ProductoServlet.class
+datos\ProveedoresDAO.class
 servicio\ProductoServicio.class
 datos\ProductoDAOImpl.class
+web\ProveedoresServlet.class
 datos\ProductoDAO.class
-web\ProductoServlet.class
