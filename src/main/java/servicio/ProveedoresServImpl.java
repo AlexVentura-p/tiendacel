@@ -48,4 +48,14 @@ public class ProveedoresServImpl implements ProveedoresServ{
         proveedoresdao.deleteProveedores(proveedores);
     }
 
+    @Override
+    public void insertarProveedores(Proveedores proveedores) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void updateProveedores(Proveedores proveedores) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }

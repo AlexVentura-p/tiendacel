@@ -8,9 +8,9 @@
 </jsp:include>
 
 <body id="page-top">
-    
+
     <div id="wrapper">
-        
+
         <!--INICIO MENU LATERAL -->
         <jsp:include page="/WEB-INF/comunes/sidebar.jsp" />
         <!-- FIN MENU LATERAL -->
@@ -18,12 +18,12 @@
 
             <!-- Main Content -->
             <div id="content">
-                
+
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mt-4 ml-4">
                     <h1 class="h3 mb-0 text-gray-800 ">Mantenimiento Proveedores</h1>
                 </div>
-                
+
                 <div >
                     <div class="container-fluid">
                         <!-- SU TABLA CRUD COMIENZA AQUI -->
@@ -52,23 +52,19 @@
                                                 <form action="${pageContext.request.contextPath}/proveedores?accion=eliminar&idProveedor=${pvd.id_proveedor}"
                                                       method="POST">
                                                     <button type="submit" class="btn btn-primary">
-                                                    Eliminar
-                                                </button>  
-                                                    
-                                                </form>
-                                                
-                                            </td>
-                                            <td>
-                                                <a data-bs-toggle="modal" data-bs-target="#modificarProveedoresModal">
-                                                <form action="${pageContext.request.contextPath}/proveedores?accion=modificar&idProveedor=${pvd.id_proveedor}"
-                                                      method="POST">
-                                                    <button type="submit" class="btn btn-primary">
-                                                    Modificar
-                                                </button>  
-                                                    
+                                                        Eliminar
+                                                    </button>  
+
                                                 </form>
 
-                                        </a>
+                                            </td>
+                                            <td>
+                                                <a href="${pageContext.request.contextPath}/proveedores?accion=modificar&idProveedor=${pvd.id_proveedor}">
+                                                    <button type="submit" class="btn btn-primary">
+                                                        Modificar
+                                                    </button>  
+
+                                                </a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -82,7 +78,9 @@
         </div>
     </div>
     <!-- AGREGA EL CLIENTE MODAL -->
+    <div>
     <jsp:include page="/WEB-INF/modales/proveedores/agregarProveedores.jsp" />
+    </div>
     <!-- FIN CLIENTE MODAL -->
     <jsp:include page="/WEB-INF/comunes/footer.jsp"/> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

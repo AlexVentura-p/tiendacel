@@ -1,4 +1,4 @@
-<div class="modal fade" id="agregarProveedoresModal">
+<div class="modal fade" id="agregarProveedoresModal"/>
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-dark text-white">

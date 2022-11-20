@@ -21,4 +21,8 @@ public interface ProveedoresServ {
     public void modificarProveedores(Proveedores proveedores);
     
     public void eliminarProveedores(Proveedores proveedores);
+
+    public void insertarProveedores(Proveedores proveedores);
+
+    public void updateProveedores(Proveedores proveedores);
 }
