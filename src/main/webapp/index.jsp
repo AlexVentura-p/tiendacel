@@ -34,11 +34,14 @@
             </h3>
             
         </div>
+        <div class="col-lg-12 text-center">
+            <h3 class>Enlace para listado de Roles 
+                <a href="roles">Ir al listado de Roles</a>
+            </h3>
+            
+        </div>
         
-    </div>
-    <!-- AGREGA EL CLIENTE MODAL -->
-    <jsp:include page="/WEB-INF/modales/producto/agregarProducto.jsp" />
-    <!-- FIN CLIENTE MODAL -->
+    </div> 
     <jsp:include page="/WEB-INF/comunes/footer.jsp"/> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
