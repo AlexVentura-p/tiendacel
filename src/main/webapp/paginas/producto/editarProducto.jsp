@@ -29,7 +29,7 @@
                         <div>
                             <h1>Editar producto</h1>
                             <form action="${pageContext.request.contextPath}/productos?accion=modificar&idProducto=${producto.id_producto}"
-                                method="POST" class="was-validated">
+                                method="POST" >
                               <section id="details">
                                   <div class="container">
                                       <div class="row">
@@ -44,12 +44,22 @@
                                                           <input type="text" class="form-control" name="nombre" required value="${producto.nombre}">
                                                       </div>
                                                       <div class="form-group">
-                                                          <label for="id_categoria">Id categoria</label>
-                                                          <input type="text" class="form-control" name="id_categoria" required value="${producto.id_categoria}">
+                                                          <label for="id_categoria">Categoria</label>
+                                                          <select id="id_categoria" name="id_categoria" class="form-control" required>
+                                                            <option selected disabled value="">Seleccciona categoria</option>
+                                                            <c:forEach items="${categorias}" var="cat">
+                                                                <option value="${cat.id_categoria}">${cat.nombre}</option>
+                                                            </c:forEach>
+                                                        </select>
                                                       </div>
                                                       <div class="form-group">
-                                                          <label for="id_proveedor">Id proveedor</label>
-                                                          <input type="text" class="form-control" name="id_proveedor" required value="${producto.id_proveedor}">
+                                                          <label for="id_proveedor">Proveedor</label>
+                                                          <select id="id_proveedor" name="id_proveedor" class="form-control" required>
+                                                            <option selected disabled value="">Seleccciona proveedor</option>
+                                                            <c:forEach items="${proveedores}" var="prov">
+                                                                <option value="${prov.id_proveedor}">${prov.nombre}</option>
+                                                            </c:forEach>
+                                                        </select>
                                                       </div>
                                                       <div class="form-group">
                                                           <label for="precio">Precio</label>

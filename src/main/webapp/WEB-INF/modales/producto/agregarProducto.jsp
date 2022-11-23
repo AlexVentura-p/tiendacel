@@ -1,3 +1,5 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="modal fade" id="agregarProductoModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -11,11 +13,21 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="categoria">Categoria</label>
-                        <input type="text" class="form-control" name="categoria"required>
+                        <select id="categoria" name="categoria" class="form-control" required>
+                          <option selected disabled value="">Seleccciona categoria</option>
+                          <c:forEach items="${categorias}" var="cat">
+                              <option value="${cat.id_categoria}">${cat.nombre}</option>
+                          </c:forEach>
+                      </select>
                     </div>
                     <div class="form-group">
                         <label for="proveedor">Proveedor</label>
-                        <input type="text" class="form-control" name="proveedor"required>
+                        <select id="proveedor" name="proveedor" class="form-control" required>
+                          <option selected disabled value="">Seleccciona proveedor</option>
+                          <c:forEach items="${proveedores}" var="prov">
+                              <option value="${prov.id_proveedor}">${prov.nombre}</option>
+                          </c:forEach>
+                      </select>
                     </div>
                     <div class="form-group">
                         <label for="nombre">Nombre</label>

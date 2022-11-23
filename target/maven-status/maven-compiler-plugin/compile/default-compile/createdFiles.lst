@@ -1,9 +1,3 @@
-dominio\Producto.class
-servicio\ProductoServicioImpl.class
-servicio\ProductoServicio.class
-datos\ProductoDAOImpl.class
-datos\ProductoDAO.class
-web\ProductoServlet.class
 web\CategoriasServlet.class
 dominio\Producto.class
 servicio\ProductoServicioImpl.class

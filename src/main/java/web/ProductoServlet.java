@@ -4,7 +4,9 @@
  */
 package web;
 
+import dominio.Categorias;
 import dominio.Producto;
+import dominio.Proveedores;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
@@ -14,12 +16,20 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import servicio.CategoriasServ;
 import servicio.ProductoServicio;
+import servicio.ProveedoresServ;
 
 @WebServlet("/productos")
 public class ProductoServlet extends HttpServlet{
     @Inject
     ProductoServicio productoServicio;
+    
+    @Inject
+    CategoriasServ categoriaServicio;
+    
+    @Inject
+    ProveedoresServ proveedoresServicio;
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -41,7 +51,10 @@ public class ProductoServlet extends HttpServlet{
         
     protected void accionDefault( HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         List<Producto> productos = productoServicio.listarProductos();
-        System.out.println("productos = " + productos);
+        List<Categorias> categorias = categoriaServicio.listarCategorias();
+        List<Proveedores> proveedores = proveedoresServicio.listarProveedores();
+        request.setAttribute("categorias", categorias);
+        request.setAttribute("proveedores", proveedores);
         request.setAttribute("productos", productos);
         request.getRequestDispatcher("paginas/listadoProductos.jsp").forward(request, response);
 
@@ -51,7 +64,11 @@ public class ProductoServlet extends HttpServlet{
         
         int idProducto = Integer.parseInt(request.getParameter("idProducto"));
         Producto producto = productoServicio.encontrarProductoPorId(idProducto);
+        List<Categorias> categorias = categoriaServicio.listarCategorias();
+        List<Proveedores> proveedores = proveedoresServicio.listarProveedores();
         request.setAttribute("producto", producto);
+        request.setAttribute("categorias", categorias);
+        request.setAttribute("proveedores", proveedores);
         String jspEditar = "/paginas/producto/editarProducto.jsp";
         request.getRequestDispatcher(jspEditar).forward(request, response);
     }
