@@ -40,8 +40,7 @@ public class Roles implements Serializable {
     @Size(max = 45)
     @Column(name = "name")
     private String name;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idRole")
-    private Collection<Users> usersCollection;
+    
 
     public Roles() {
     }
@@ -64,39 +63,6 @@ public class Roles implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Collection<Users> getUsersCollection() {
-        return usersCollection;
-    }
-
-    public void setUsersCollection(Collection<Users> usersCollection) {
-        this.usersCollection = usersCollection;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idRole != null ? idRole.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Roles)) {
-            return false;
-        }
-        Roles other = (Roles) object;
-        if ((this.idRole == null && other.idRole != null) || (this.idRole != null && !this.idRole.equals(other.idRole))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "dominio.Roles[ idRole=" + idRole + " ]";
     }
     
 }

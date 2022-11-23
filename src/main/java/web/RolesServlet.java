@@ -24,7 +24,6 @@ public class RolesServlet extends HttpServlet {
     protected void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Roles> roles = rolesServicio.listarRoles();
         request.setAttribute("roles", roles);
-        System.out.println(roles);
         request.getRequestDispatcher("paginas/roles/listaRoles.jsp").forward(request, response);
     }
 

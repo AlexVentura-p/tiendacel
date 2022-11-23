@@ -4,7 +4,6 @@
  */
 package servicio;
 
-import dominio.Categorias;
 import dominio.Roles;
 import java.util.List;
 import javax.ejb.Local;

@@ -18,14 +18,10 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
-/**
- *
- * @author alexv
- */
 @Entity
 @Table(name = "users")
 @NamedQueries({
-    @NamedQuery(name = "Users.findAll", query = "SELECT u FROM Users u"),
+    @NamedQuery(name = "Users.findAll", query = "SELECT u FROM Users u ORDER BY u.idUser"),
     @NamedQuery(name = "Users.findByIdUser", query = "SELECT u FROM Users u WHERE u.idUser = :idUser"),
     @NamedQuery(name = "Users.findByUsername", query = "SELECT u FROM Users u WHERE u.username = :username"),
     @NamedQuery(name = "Users.findByPassword", query = "SELECT u FROM Users u WHERE u.password = :password"),
@@ -47,15 +43,29 @@ public class Users implements Serializable {
     @Size(max = 75)
     @Column(name = "correo")
     private String correo;
-    @JoinColumn(name = "id_role", referencedColumnName = "id_role")
-    @ManyToOne(optional = false)
-    private Roles idRole;
+    @Column(name = "id_role")
+    private int idRole;
 
     public Users() {
     }
 
     public Users(Integer idUser) {
         this.idUser = idUser;
+    }
+    
+    public Users(Integer idUser, String username, String password, String correo, int idRole) {
+        this.idUser = idUser;
+        this.username = username;
+        this.password = password;
+        this.correo = correo;
+        this.idRole = idRole;
+    }
+
+    public Users(String username, String password, String correo, int idRole) {
+        this.username = username;
+        this.password = password;
+        this.correo = correo;
+        this.idRole = idRole;
     }
 
     public Integer getIdUser() {
@@ -90,37 +100,12 @@ public class Users implements Serializable {
         this.correo = correo;
     }
 
-    public Roles getIdRole() {
+    public int getIdRole() {
         return idRole;
     }
 
-    public void setIdRole(Roles idRole) {
+    public void setIdRole(int idRole) {
         this.idRole = idRole;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idUser != null ? idUser.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Users)) {
-            return false;
-        }
-        Users other = (Users) object;
-        if ((this.idUser == null && other.idUser != null) || (this.idUser != null && !this.idUser.equals(other.idUser))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "dominio.Users[ idUser=" + idUser + " ]";
     }
     
 }

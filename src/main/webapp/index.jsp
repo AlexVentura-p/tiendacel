@@ -40,6 +40,12 @@
             </h3>
             
         </div>
+        <div class="col-lg-12 text-center">
+            <h3 class>Enlace para listado de Usuarios 
+                <a href="users">Ir al listado de Usuarios</a>
+            </h3>
+            
+        </div>
         
     </div> 
     <jsp:include page="/WEB-INF/comunes/footer.jsp"/> 
