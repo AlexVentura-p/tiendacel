@@ -52,12 +52,12 @@ CREATE TABLE IF NOT EXISTS `tiendaCel`.`users` (
   `username` VARCHAR(100) NULL,
   `password` VARCHAR(45) NULL,
   `correo` VARCHAR(75) NULL,
-  `id_role` INT NOT NULL,
+  `id_role` INT NULL,
   PRIMARY KEY (`id_user`),
   CONSTRAINT `id_role`
     FOREIGN KEY (`id_role`)
     REFERENCES `tiendaCel`.`roles` (`id_role`)
-    ON DELETE CASCADE
+    ON DELETE SET NULL
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
@@ -90,12 +90,12 @@ CREATE TABLE IF NOT EXISTS `tiendaCel`.`productos` (
   CONSTRAINT `id_categoria`
     FOREIGN KEY (`id_categoria`)
     REFERENCES `tiendaCel`.`categorias` (`id_categoria`)
-    ON DELETE CASCADE
+    ON DELETE SET NULL
     ON UPDATE CASCADE,
   CONSTRAINT `id_proveedor`
     FOREIGN KEY (`id_proveedor`)
     REFERENCES `tiendaCel`.`proveedores` (`id_proveedor`)
-    ON DELETE CASCADE
+    ON DELETE SET NULL
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
