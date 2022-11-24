@@ -9,10 +9,6 @@ import dominio.Producto;
 import java.util.List;
 import javax.inject.Inject;
 
-/**
- *
- * @author alexv
- */
 public class ProductoServicioImpl implements ProductoServicio{
 
     @Inject
@@ -47,5 +43,12 @@ public class ProductoServicioImpl implements ProductoServicio{
     public void eliminarProducto(Producto producto) {
         productodao.deleteProducto(producto);
     }
+
+    @Override
+    public List<Producto> findProductosPorCategoriaYProveedor(int idCategoria, int idProveedor) {
+        return productodao.findProductosPorCategoriaYProveedor(idCategoria,idProveedor);
+    }
+    
+    
     
 }

@@ -29,6 +29,9 @@
                         <form action="${pageContext.request.contextPath}/proveedores?accion=editar&id_proveedor=${pvd.id_proveedor}"
                               method="POST" class="was-validated">
                             <div class="modal-body">
+                                <div class="card-header">
+                                    <h4>Editar Proveedor</h4>
+                                </div>
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label for="nombre">Nombre</label>

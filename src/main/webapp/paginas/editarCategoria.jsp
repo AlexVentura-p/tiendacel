@@ -29,6 +29,9 @@
                         <form action="${pageContext.request.contextPath}/categorias?accion=editar&id_categoria=${ctg.id_categoria}"
                               method="POST" class="was-validated">
                             <div class="modal-body">
+                                <div class="card-header">
+                                    <h4>Editar Categoria</h4>
+                                </div>
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label for="nombre">Nombre</label>

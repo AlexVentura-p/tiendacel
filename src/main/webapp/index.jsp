@@ -52,6 +52,12 @@
             </h3>
             
         </div>
+        <div class="col-lg-12 text-center">
+            <h3 class>Enlace para Consultas 
+                <a href="consultas">Ir a consultas</a>
+            </h3>
+            
+        </div>
         
     </div> 
     <jsp:include page="/WEB-INF/comunes/footer.jsp"/> 

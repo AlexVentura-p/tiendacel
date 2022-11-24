@@ -29,6 +29,9 @@
                         <form action="${pageContext.request.contextPath}/users?accion=editar&idUser=${user.idUser}"
                               method="POST" class="was-validated">
                             <div class="modal-body">
+                                <div class="card-header">
+                                    <h4>Editar User</h4>
+                                </div>
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label for="username">Username</label>

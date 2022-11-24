@@ -7,10 +7,7 @@ package datos;
 import dominio.Proveedores;
 import java.util.List;
 
-/**
- *
- * @author alexv
- */
+
 public interface ProveedoresDAO {
     
     public List<Proveedores> findAllProveedores();

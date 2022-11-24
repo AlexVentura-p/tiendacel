@@ -7,10 +7,7 @@ package datos;
 import dominio.Producto;
 import java.util.List;
 
-/**
- *
- * @author alexv
- */
+
 public interface ProductoDAO {
     
     public List<Producto> findAllProductos();
@@ -24,4 +21,6 @@ public interface ProductoDAO {
     public void updateProducto(Producto producto);
     
     public void deleteProducto(Producto producto);
+    
+    public List<Producto> findProductosPorCategoriaYProveedor(int idCategoria,int idProveedor);
 }

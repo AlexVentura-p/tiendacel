@@ -21,4 +21,6 @@ public interface ProductoServicio {
     public void modificarProducto(Producto producto);
     
     public void eliminarProducto(Producto producto);
+    
+    public List<Producto> findProductosPorCategoriaYProveedor(int idCategoria,int idProveedor);
 }

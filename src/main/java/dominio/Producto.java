@@ -19,7 +19,8 @@ import javax.persistence.Table;
 
 @Entity
 @NamedQueries({
-    @NamedQuery(name = "Producto.findAll", query="SELECT p from Producto p ORDER BY p.id_producto")
+    @NamedQuery(name = "Producto.findAll", query="SELECT p from Producto p ORDER BY p.id_producto"),
+    @NamedQuery(name = "Producto.findCategoryProveedor", query="select p from Producto p where p.id_categoria =:id_categoria and p.id_proveedor=:id_proveedor")
 })
 @Table(name = "productos")
 public class Producto implements Serializable{

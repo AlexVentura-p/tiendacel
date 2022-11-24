@@ -47,5 +47,14 @@ public class ProductoDAOImpl implements ProductoDAO{
     public void deleteProducto(Producto producto) {
         em.remove(em.merge(producto));
     }
+
+    @Override
+    public List<Producto> findProductosPorCategoriaYProveedor(int idCategoria,int idProveedor) {
+        //Query query = em.createQuery("from Productos p where p.id_categoria =:id_categoria and p.id_proveedor=:id_proveedor");
+        Query query = em.createNamedQuery("Producto.findCategoryProveedor");
+        query.setParameter("id_categoria", idCategoria);
+        query.setParameter("id_proveedor", idProveedor);
+        return query.getResultList();
+    }
     
 }

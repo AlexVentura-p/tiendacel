@@ -42,5 +42,10 @@
             <h5>Detalle de Facturas</h5></a>
     </li>
     
+    <li class="nav-item active">
+        <a class="nav-link" href="consultas">
+            <h5>Consultas</h5></a>
+    </li>
+    
 
 </ul>

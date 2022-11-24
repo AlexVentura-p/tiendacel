@@ -7,10 +7,6 @@ package datos;
 import dominio.Categorias;
 import java.util.List;
 
-/**
- *
- * @author alexv
- */
 public interface CategoriasDAO {
     
     public List<Categorias> findAllCategorias();
