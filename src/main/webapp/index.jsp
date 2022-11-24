@@ -46,6 +46,12 @@
             </h3>
             
         </div>
+        <div class="col-lg-12 text-center">
+            <h3 class>Enlace para listado de Detalle de Facturas 
+                <a href="detalles">Ir al listado de detalle de facturas</a>
+            </h3>
+            
+        </div>
         
     </div> 
     <jsp:include page="/WEB-INF/comunes/footer.jsp"/> 

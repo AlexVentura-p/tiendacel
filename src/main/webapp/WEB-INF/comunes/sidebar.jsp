@@ -38,8 +38,8 @@
     </li>
     
     <li class="nav-item active">
-        <a class="nav-link" href="#">
-            <h5>Facturas</h5></a>
+        <a class="nav-link" href="detalles">
+            <h5>Detalle de Facturas</h5></a>
     </li>
     
 
